@@ -5,7 +5,7 @@ const Header = () => {
     <div className='p-2'>
     <div className="justify-between flex  cursor-pointer w-full items-center h-[80px] border border-black rounded-sm ">
     <div className="  items-center p-2 justify-center">
-      <img src="/food.png" alt="Food" className='items-center justify-center  w-[95px]  h-[70px]'/>
+      <img src="/food.png" alt="Food" className='items-center justify-center  w-[100px]  h-[60px]'/>
     </div>
   
    
