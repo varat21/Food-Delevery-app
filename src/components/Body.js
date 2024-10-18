@@ -14,11 +14,14 @@ const Body = () => {
     menu: {
       items: [
         {
+          qty: 5,
+
           name: "Coke",
-          qty: 20,
           category: "Drinks",
           sizes: ["Small", "Large"],
           stars: 3.5,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
         {
           name: "Pepsi",
@@ -26,6 +29,8 @@ const Body = () => {
           category: "Drinks",
           sizes: ["Small", "Large"],
           stars: 3.5,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
         {
           name: "Water",
@@ -33,6 +38,8 @@ const Body = () => {
           category: "Drinks",
           sizes: ["Small", "Large"],
           stars: 3,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
         {
           name: "Hamburger",
@@ -40,6 +47,8 @@ const Body = () => {
           category: "Junk Food",
           sizes: ["Small", "Large"],
           stars: 4.5,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
         {
           name: "Fries",
@@ -47,6 +56,8 @@ const Body = () => {
           category: "Junk Food",
           sizes: ["Small", "Large"],
           stars: 3.5,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
         {
           name: "Pizza",
@@ -54,6 +65,8 @@ const Body = () => {
           category: "Junk Food",
           sizes: ["Small", "Large"],
           stars: 3.5,
+          image: "https://api.foodmood.com.np/storage/uploads/images/restaurantprofile/638f357a3edbc.jpg", // Add image URL
+
         },
       ],
     },
@@ -96,7 +109,7 @@ const Body = () => {
   }
 
   return (
-    <div className="p-6 w-full bg-gray-100 min-h-screen">
+    <div className="p-6 w-full bg-gray-100 min-h-screen m-1">
       <input
         className="border border-gray-400 h-10 w-60 rounded-xl"
         placeholder="Search"
@@ -127,10 +140,11 @@ const Body = () => {
         ).map((restaurant, index) => (
           <RestaurantCard
             key={index}
-            name={restaurant.name}
-            category={restaurant.category}
-            sizes={restaurant.sizes}
-            stars={restaurant.stars}
+            // name={restaurant.name}
+            // category={restaurant.category}
+            // sizes={restaurant.sizes}
+            // stars={restaurant.stars}
+            restaurant={restaurant}
           />
         ))}
       </div>

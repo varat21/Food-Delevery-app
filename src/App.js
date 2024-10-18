@@ -11,6 +11,7 @@ import {
 import RestaurantMenu from './components/RestaurantMenu';
 // import Grocery from './components/Grocery';
 const  Grocery =lazy(()=>import("./components/Grocery"))
+const Cart =lazy(()=>import("./components/Cart"))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     
   children:[
   {
-    path:"/body",
+    path:"/",
     element:<Body/>
   },
   {
@@ -37,6 +38,13 @@ element:<Suspense fallback={<h1>Loading...</h1>}>
   <Grocery/>
   </Suspense>,
   },
+  {
+    path: "cart",
+    element: <Suspense fallback={<h1>Loading</h1>}>
+      <Cart/>
+    </Suspense>,
+  },
+  
   {
     path:"/body/:resId",
     element:<RestaurantMenu/>
